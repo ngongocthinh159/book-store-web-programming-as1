@@ -1,0 +1,112 @@
+.section-book-of-month {
+  background-color: var(--background-color);
+  padding: 40px 0 80px 0;
+}
+
+.section-book-of-month-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.b-o-m__welcome-warraper {
+  display: flex;
+  align-items: center;
+}
+
+.b-o-m__welcome-horizontal-line {
+  width: 4rem;
+  border: 1px solid var(--primary-color);
+}
+
+.b-o-m__welcome-text {
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--white-color);
+  margin-left: 16px;
+  font-weight: 300;
+  font-family: 'Cardo', serif;
+}
+
+.b-o-m__title {
+  margin: 30px 0 0 0;
+  font-size: 6.5rem;
+  color: var(--white-color);
+  line-height: 7.6rem;
+  font-weight: 700;
+  font-family: 'Cardo', serif;
+}
+
+.b-o-m__sub-title {
+  font-size: 1.9rem;
+  color: var(--white-color);
+  line-height: 1.6;
+  color: #b4c7e7;
+  font-weight: 300;
+}
+
+.b-o-m__order-btn {
+  font-size: 2rem;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  padding: 24px 61px;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.b-o-m__demo-btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: var(--white-color);
+  border-bottom: 1px solid var(--white-color);
+  padding: 12px 8px;
+  margin-left: 48px;
+}
+
+.b-o-m__book-info-wrapper {
+  align-self: stretch;
+  margin-top: 50px;
+}
+
+.b-o-m__book-info {
+}
+
+.b-o-m__book-info-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--white-color);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 36px;
+}
+
+.b-o-m__book-info-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.b-o-m__book-info-sub-title {
+  font-size: 1.7rem;
+  color: #B4C7E7;
+  line-height: 1.6;
+  padding-left: 36px; 
+}
+
+.b-o-m__book-img-wrapper {
+  display: flex;
+  justify-content: end;
+  padding-left: 10%;
+}
+
+.b-o-m__book-img {
+  width: 100%;
+}

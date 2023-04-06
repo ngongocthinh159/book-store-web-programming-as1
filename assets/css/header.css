@@ -1,0 +1,140 @@
+/* Header */
+.header {
+  background-color: var(--background-color);
+}
+
+.header-wrapper {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  height: 40px;
+}
+
+.header__connection-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.header__connection-item {
+}
+
+.header__connection-item-link {
+  text-decoration: none;
+}
+
+.header__connection-item-icon {
+}
+
+.header__connection-item:first-child .header__connection-item-icon {
+  margin-left: 16px;
+}
+
+.header__connection-item-icon-svg {
+  height: 24px;
+  fill: var(--white-color);
+}
+
+.header__connection-item-icon-svg:hover {
+  fill: var(--primary-color);
+}
+
+.header-left {
+  display: flex;
+  height: 100%;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header__nav-item {
+}
+
+.header__nav-item-link {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.6rem;
+  padding: 0 16px;
+}
+
+.header__nav-item-link:hover {
+  opacity: 0.8;
+}
+
+.header__nav-item--active .header__nav-item-link {
+  color: var(--primary-color);
+}
+
+.header__nav-item-icon {
+}
+
+.header__nav-item-icon-svg {
+  height: 12px;
+  fill: var(--white-color);
+  margin-left: 4px;
+}
+
+.header__shopping-cart-link {
+  display: block;
+  
+}
+
+.header__shopping-cart-icon {
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.header__shopping-cart-icon::after {
+  content: "3";
+  position: absolute;
+  height: 20px;
+  width: 24px;
+  right: 10px;
+  top: 28px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 1.4rem;
+  font-style: normal;
+  border-radius: 44%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid var(--background-color);
+}
+
+.header__shopping-cart-icon-svg {
+  height: 18px;
+  fill: var(--white-color);
+}
+
+.header__shopping-cart-icon:hover .header__shopping-cart-icon-svg {
+  fill: var(--primary-color);
+}
+
+
