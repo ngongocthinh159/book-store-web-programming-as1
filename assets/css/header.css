@@ -98,7 +98,8 @@
 
 .header__shopping-cart-link {
   display: block;
-  
+  text-decoration: none;
+  position: relative;
 }
 
 .header__shopping-cart-icon {
@@ -137,4 +138,68 @@
   fill: var(--primary-color);
 }
 
+.header__shopping-cart-container {
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  right: 0;
+  top: calc(var(--header-height) - 20px);
+  min-width: 250px;
+  border: 4px solid var(--primary-color);
+}
+
+.header__shopping-cart-heading {
+  color: #333;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 12px 16px;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.header__shopping-cart-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header__shopping-cart-item {
+
+}
+
+.header__shopping-cart-item-link {
+  text-decoration: none;
+  display: flex;
+}
+
+.header__shopping-cart-item-img {
+  width: 30px;
+  height: 30px;
+  background-image: url('/assets/imgs/books/php_mysql.webp');
+  background-position: center;
+  background-size: cover;
+}
+
+.header__shopping-cart-item-body {
+
+}
+
+.header__shopping-cart-item-title {
+
+}
+
+.header__shopping-cart-item-price-wrapper {
+
+}
+
+.header__shopping-cart-item-price {
+
+}
+
+.header__shopping-cart-item-multiply {
+
+}
+
+.header__shopping-cart-item-quantity {
+
+}
 

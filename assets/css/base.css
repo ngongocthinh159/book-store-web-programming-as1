@@ -50,3 +50,9 @@ html {
   background-color: var(--primary-color);
   color: var(--background-color);
 }
+
+.btn-secondary {
+  background-color: var(--white-color);
+  border-radius: 1px solid var(--primary-color);
+  color: var(--background-color);
+}
