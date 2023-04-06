@@ -111,7 +111,7 @@
 }
 
 .header__shopping-cart-icon::after {
-  content: "3";
+  content: '3';
   position: absolute;
   height: 20px;
   width: 24px;
@@ -134,7 +134,7 @@
   fill: var(--white-color);
 }
 
-.header__shopping-cart-icon:hover .header__shopping-cart-icon-svg {
+.header__shopping-cart-link:hover .header__shopping-cart-icon-svg {
   fill: var(--primary-color);
 }
 
@@ -144,8 +144,33 @@
   position: absolute;
   right: 0;
   top: calc(var(--header-height) - 20px);
-  min-width: 250px;
-  border: 4px solid var(--primary-color);
+  min-width: 360px;
+  border: 3px solid var(--primary-color);
+  display: none;
+}
+
+.header__shopping-cart-link:hover .header__shopping-cart-container {
+  display: block;
+}
+
+.header__shopping-cart-container::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  right: 18px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent transparent var(--primary-color) transparent;
+}
+
+.header__shopping-cart-container::after {
+  content: '';
+  width: 50px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  top: -22px;
+  right: 5px;
 }
 
 .header__shopping-cart-heading {
@@ -153,7 +178,7 @@
   font-size: 1.6rem;
   text-align: center;
   padding: 12px 16px;
-  border-bottom: 4px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .header__shopping-cart-list {
@@ -163,43 +188,63 @@
 }
 
 .header__shopping-cart-item {
-
 }
 
 .header__shopping-cart-item-link {
   text-decoration: none;
   display: flex;
+  color: #333;
+  align-items: center;
+}
+
+.header__shopping-cart-item-link:hover {
+  background-color: #f8f8f8;
 }
 
 .header__shopping-cart-item-img {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-image: url('/assets/imgs/books/php_mysql.webp');
   background-position: center;
   background-size: cover;
 }
 
 .header__shopping-cart-item-body {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 8px;
+  flex-grow: 1;
+  padding: 8px 0;
 }
 
 .header__shopping-cart-item-title {
-
+  font-size: 1.6rem;
 }
 
 .header__shopping-cart-item-price-wrapper {
-
+  margin-top: 8px;
 }
 
 .header__shopping-cart-item-price {
-
+  font-size: 1.4rem;
 }
 
 .header__shopping-cart-item-multiply {
-
+  font-size: 1.4rem;
 }
 
 .header__shopping-cart-item-quantity {
-
+  font-size: 1.4rem;
 }
 
+.header__shopping-cart-item-delete {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.header__shopping-cart-item-delete:hover {
+  color: orange;
+}
