@@ -60,6 +60,18 @@ html {
   color: var(--primary-color);
 }
 
+.btn-ternary {
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-ternary:hover {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--background-color);
+}
+
 /* Category heading */
 .category-heading {
   color: var(--background-color);
@@ -70,7 +82,7 @@ html {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .category-heading:hover {
@@ -93,6 +105,26 @@ html {
 .category-heading-icon-svg {
   height: 3rem;
   margin-left: 12px;
+}
+
+/* Heading left underline */
+.heading-left-underline {
+  color: var(--background-color);
+  font-size: 4.6rem;
+  line-height: 1.8;
+  font-family: 'Cardo', serif;
+  margin: 0;
+  position: relative;
+}
+
+.heading-left-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background-color: var(--primary-color);
 }
 
 /* Carousel */
@@ -205,7 +237,7 @@ html {
   font-size: 3.2rem;
   color: var(--background-color);
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   --line-height: 3.2rem;
   line-height: var(--line-height);
   max-height: calc(var(--line-height) * 1);
@@ -216,7 +248,20 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: start;
-  text-transform: capitalize;
+}
+
+.carousel__item-sub-category-link {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 12px;
+  color: var(--background-color);
+  text-decoration: none;
+  display: block;
+}
+
+.carousel__item-sub-category-link:hover {
+  color: var(--primary-color);
 }
 
 .carousel__item-sub-title {
@@ -234,7 +279,6 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: start;
-  text-transform: capitalize;
 }
 
 .carousel__item-detail-wrapper {

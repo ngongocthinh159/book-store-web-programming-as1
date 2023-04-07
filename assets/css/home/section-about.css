@@ -1,0 +1,117 @@
+.section-about-us {
+  padding-bottom: 90px;
+  background-color: #F4F8FF;
+}
+
+.about-company-left {
+  padding-right: 30px;
+}
+
+.ac__company-img {
+  width: 100%;
+}
+
+.about-company-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ac__heading {
+  margin-bottom: 28px;
+}
+
+.ac__slogan {
+  color: #969aa0;
+  font-size: 1.9rem;
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 44px;
+  font-weight: 300;
+}
+
+.ac__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.ac__item {
+  padding: 0 24px;
+  position: relative;
+}
+
+.ac__item:first-child {
+  padding-left: 0px;
+}
+
+.ac__item:last-child {
+  padding-right: 0px;
+}
+
+.ac__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -14px;
+  width: 3px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.ac__item-num {
+  font-size: 4.5rem;
+  color: var(--background-color);
+  margin: 0;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.ac__item-title {
+  color: #969aa0;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.ac__contact-wrapper {
+  padding: 16px;
+  background-color: var(--background-color);
+  display: inline-flex;
+  align-self: flex-start;
+  border-radius: 4px;
+}
+
+.ac__contact-qr {
+  height: 100px;
+  width: 100px;
+}
+
+.ac__contact-info {
+  margin-left: 32px;
+}
+
+.ac__contact-info-heading {
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  font-family: 'Cardo', serif;
+  margin-bottom: 24px;
+}
+
+.ac__contact-info-mail {
+  font-size: 1.6rem;
+  color: #b4c7e7;
+  margin: 0;
+  margin-bottom: 12px;
+
+}
+
+.ac__contact-info-phone {
+  font-size: 1.6rem;
+  color: #b4c7e7;
+  margin: 0;
+}

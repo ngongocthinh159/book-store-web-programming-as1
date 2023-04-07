@@ -1,0 +1,40 @@
+.section-get-book-today {
+  background-color: var(--background-color);
+  padding: 90px 0;
+}
+
+.gbt__left-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gbt__heading {
+  color: var(--white-color);
+}
+
+.gbt__sub-heading {
+  color: #B4C7E7;
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.gbt__btn-explore {
+  font-size: 2rem;
+  font-family: 'Cardo', serif;
+  font-weight: 700;
+  padding: 24px 61px;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.gbt__right-container {
+
+}
+
+.gbt__img {
+  width: 100%;
+}

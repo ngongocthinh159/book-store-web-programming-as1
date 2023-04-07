@@ -1,0 +1,23 @@
+.section-trusted {
+  padding: 90px 0;
+}
+
+.section-trusted__heading {
+  text-align: center;
+  display: block;
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+.section-trusted__heading:hover {
+  opacity: 1;
+}
+
+.section-trustred__img-wrapper {
+  text-align: center;
+  padding: 0 30px;
+}
+
+.section-trusted__img {
+  width: 100%;
+}
