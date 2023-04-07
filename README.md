@@ -1,1 +1,3 @@
-# book-store-web-programming-as1
+#Bookcademy
+
+Static programming book store
