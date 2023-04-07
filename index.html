@@ -32,14 +32,17 @@
     <!-- Base CSS -->
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/utils.css" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/home/section-b-o-m.css" />
+    <link rel="stylesheet" href="./assets/css/home/section-pb.css" />
     <link rel="stylesheet" href="./assets/css/home/responsive.css" />
   </head>
   <body>
     <div class="app">
+      <!-- Header -->
       <header id="header" class="header">
         <div class="grid wide">
           <div class="header-wrapper">
@@ -253,7 +256,7 @@
       <!-- Section book of month -->
       <section class="section-book-of-month" id="section-book-of-month">
         <div class="grid wide">
-          <div class="row">
+          <div class="row sm-gutter">
             <div class="col l-6 m-6 c-12">
               <div class="section-book-of-month-left">
                 <div class="b-o-m__welcome-warraper">
@@ -278,7 +281,7 @@
                   <a href="" class="b-o-m__demo-btn btn">Read Free Demo</a>
                 </div>
                 <div class="b-o-m__book-info-wrapper">
-                  <div class="row">
+                  <div class="row sm-gutter">
                     <div class="col l-4 m-4 c-12">
                       <div class="b-o-m__book-info">
                         <div class="b-o-m__book-info-title">Pages</div>
@@ -316,7 +319,11 @@
           </div>
         </div>
 
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          style="margin-bottom: -5px"
+          viewBox="0 0 1440 320"
+        >
           <path
             fill="#fff"
             fill-opacity="1"
@@ -325,7 +332,959 @@
         </svg>
       </section>
 
-      <!-- Section web development book -->
+      <!-- Section programming book -->
+      <section class="section-programming-book">
+        <a href="./pages/category.html" class="pb__heading category-heading">
+          Programming Books
+          <i class="category-heading-icon">
+            <svg
+              class="category-heading-icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                fill="#1b3764"
+                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+              />
+            </svg>
+          </i>
+        </a>
+
+        <div class="container">
+          <div id="carousel-pb" class="carousel">
+            <button class="carousel__prev-btn">
+              <svg
+                class="carousel__prev-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                />
+              </svg>
+            </button>
+            <ul class="carousel__list">
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/atomic-one.png"
+                    alt="Atomic One's"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">Atomic One's</h3>
+                  <h4 class="carousel__item-sub-title">
+                    Atomic habits are the building blocks of remarkable results
+                    so as a good web developers...
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        720 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">10 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item carousel__item--active">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/eloquent-js.jpg"
+                    alt="Eloquent Javascript"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">Eloquent Javascript</h3>
+                  <h4 class="carousel__item-sub-title">
+                    JavaScript lies at the heart of almost every modern web
+                    application, from social apps like Twitter to browser-based
+                    game frameworks like Phaser and Babylon. Though simple for
+                    beginners to pick up and play with, JavaScript is a
+                    flexible, complex language that you can use to build
+                    full-scale applications.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">9 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/head-first-web.png"
+                    alt="Head First: Web Developement"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Head First: Web Developement
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Master the world’s most used programming language? A better
+                    solution for every web design problems
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">9 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/php-objects-patterns.jpg"
+                    alt="PHP Objects, Patterns, and Practice"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    PHP Objects, Patterns, and Practice
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Backed by a tireless development community, PHP has been a
+                    model of language evolution over its 10+ year history. Borne
+                    from a contract developer's pet project, these days you'll
+                    find PHP powering many of the world's largest web sites,
+                    including Yahoo!, Digg, EA Games, and Lycos.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1230 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/secrets-of-js-ninja.png"
+                    alt="Secrets of JavaScript Ninja"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Secrets of JavaScript Ninja
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Secrets of the JavaScript Ninja, Second Edition uses
+                    practical examples to clearly illustrate each core concept
+                    and technique. This completely revised edition shows you how
+                    to master key JavaScript concepts such as functions,
+                    closures, objects, prototypes, and promises. It covers APIs
+                    such as the DOM, events, and timers. You’ll discover best
+                    practice techniques such as testing, and cross-browser
+                    development, all taught from the perspective of skilled
+                    JavaScript practitioners.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1860 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">30 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/js-good-parts.jpg"
+                    alt="JavaScript: The Good Parts (1st Edition)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    JavaScript: The Good Parts (1st Edition)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    With JavaScript: The Good Parts, you'll discover a
+                    beautiful, elegant, lightweight and highly expressive
+                    language that lets you create effective code, whether you're
+                    managing object libraries or just trying to get Ajax to run
+                    fast. If you develop sites or applications for the Web, this
+                    book is an absolute must.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">35 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/js-definitive-guide.jpg"
+                    alt="JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    JavaScript: The Definitive Guide: Master the World's
+                    Most-Used Programming Language
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    JavaScript is the programming language of the web and is
+                    used by more software developers today than any other
+                    programming language. For nearly 25 years this best seller
+                    has been the go-to guide for JavaScript programmers. The
+                    seventh edition is fully updated to cover the 2020 version
+                    of JavaScript, and new chapters cover classes, modules,
+                    iterators, generators, Promises, async/await, and
+                    metaprogramming. You’ll find illuminating and engaging
+                    example code throughout.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">35 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/learn-hs-quickly.jpg"
+                    alt="Learn JavaScript Quickly: A Complete Beginner’s Guide to Learning JavaScript, Even If You’re New to Programming (Crash Course With Hands-On Project)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Learn JavaScript Quickly: A Complete Beginner’s Guide to
+                    Learning JavaScript, Even If You’re New to Programming
+                    (Crash Course With Hands-On Project)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Developers and programmers are amongst the highest paid
+                    professions in the world, and according to the US Bureau of
+                    Labor Statistics, the number of jobs for software and app
+                    developers will increase by a shocking 24% in the next few
+                    years.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1400 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">15 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/the-road-react.jpg"
+                    alt="The Road to React: The React.js with Hooks in JavaScript Book (2023 Edition)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    The Road to React: The React.js with Hooks in JavaScript
+                    Book (2023 Edition)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    The Road to React: The React.js with Hooks in JavaScript
+                    Book (2023 Edition) - is a comprehensive and pragmatic yet
+                    concise React with Hooks (+ opt-in TypeScript) book.
+                    Purchase of this book includes free online access to the
+                    always up-to-date digital book.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/es6-beyond.jpg"
+                    alt="You Don't Know JS: ES6 & Beyond"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    You Don't Know JS: ES6 & Beyond
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    No matter how much experience you have with JavaScript, odds
+                    are you don’t fully understand the language. As part of the
+                    "You Don’t Know JS" series, this compact guide focuses on
+                    new features available in ECMAScript 6 (ES6), the latest
+                    version of the standard upon which JavaScript is built.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <button class="carousel__next-btn">
+              <svg
+                class="carousel__next-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section artificial intelligence -->
+      <!-- <section class="section-artificial-intelligence">
+        <a href="./pages/category.html" class="ai__heading category-heading">
+          Artificial Intelligence Books
+          <i class="category-heading-icon">
+            <svg
+              class="category-heading-icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                fill="#1b3764"
+                d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+              />
+            </svg>
+          </i>
+        </a>
+
+        <div class="container">
+          <div id="carousel-ai" class="carousel">
+            <button class="carousel__prev-btn">
+              <svg
+                class="carousel__prev-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                />
+              </svg>
+            </button>
+            <ul class="carousel__list">
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/atomic-one.png"
+                    alt="Atomic One's"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">Atomic One's</h3>
+                  <h4 class="carousel__item-sub-title">
+                    Atomic habits are the building blocks of remarkable results
+                    so as a good web developers...
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        720 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">10 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item carousel__item--active">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/eloquent-js.jpg"
+                    alt="Eloquent Javascript"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">Eloquent Javascript</h3>
+                  <h4 class="carousel__item-sub-title">
+                    JavaScript lies at the heart of almost every modern web
+                    application, from social apps like Twitter to browser-based
+                    game frameworks like Phaser and Babylon. Though simple for
+                    beginners to pick up and play with, JavaScript is a
+                    flexible, complex language that you can use to build
+                    full-scale applications.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">9 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/head-first-web.png"
+                    alt="Head First: Web Developement"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Head First: Web Developement
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Master the world’s most used programming language? A better
+                    solution for every web design problems
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">9 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/php-objects-patterns.jpg"
+                    alt="PHP Objects, Patterns, and Practice"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    PHP Objects, Patterns, and Practice
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Backed by a tireless development community, PHP has been a
+                    model of language evolution over its 10+ year history. Borne
+                    from a contract developer's pet project, these days you'll
+                    find PHP powering many of the world's largest web sites,
+                    including Yahoo!, Digg, EA Games, and Lycos.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1230 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/secrets-of-js-ninja.png"
+                    alt="Secrets of JavaScript Ninja"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Secrets of JavaScript Ninja
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Secrets of the JavaScript Ninja, Second Edition uses
+                    practical examples to clearly illustrate each core concept
+                    and technique. This completely revised edition shows you how
+                    to master key JavaScript concepts such as functions,
+                    closures, objects, prototypes, and promises. It covers APIs
+                    such as the DOM, events, and timers. You’ll discover best
+                    practice techniques such as testing, and cross-browser
+                    development, all taught from the perspective of skilled
+                    JavaScript practitioners.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1860 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">30 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/js-good-parts.jpg"
+                    alt="JavaScript: The Good Parts (1st Edition)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    JavaScript: The Good Parts (1st Edition)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    With JavaScript: The Good Parts, you'll discover a
+                    beautiful, elegant, lightweight and highly expressive
+                    language that lets you create effective code, whether you're
+                    managing object libraries or just trying to get Ajax to run
+                    fast. If you develop sites or applications for the Web, this
+                    book is an absolute must.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">35 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/js-definitive-guide.jpg"
+                    alt="JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    JavaScript: The Definitive Guide: Master the World's
+                    Most-Used Programming Language
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    JavaScript is the programming language of the web and is
+                    used by more software developers today than any other
+                    programming language. For nearly 25 years this best seller
+                    has been the go-to guide for JavaScript programmers. The
+                    seventh edition is fully updated to cover the 2020 version
+                    of JavaScript, and new chapters cover classes, modules,
+                    iterators, generators, Promises, async/await, and
+                    metaprogramming. You’ll find illuminating and engaging
+                    example code throughout.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">35 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/learn-hs-quickly.jpg"
+                    alt="Learn JavaScript Quickly: A Complete Beginner’s Guide to Learning JavaScript, Even If You’re New to Programming (Crash Course With Hands-On Project)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Learn JavaScript Quickly: A Complete Beginner’s Guide to
+                    Learning JavaScript, Even If You’re New to Programming
+                    (Crash Course With Hands-On Project)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    Developers and programmers are amongst the highest paid
+                    professions in the world, and according to the US Bureau of
+                    Labor Statistics, the number of jobs for software and app
+                    developers will increase by a shocking 24% in the next few
+                    years.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1400 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">15 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/the-road-react.jpg"
+                    alt="The Road to React: The React.js with Hooks in JavaScript Book (2023 Edition)"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    The Road to React: The React.js with Hooks in JavaScript
+                    Book (2023 Edition)
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    The Road to React: The React.js with Hooks in JavaScript
+                    Book (2023 Edition) - is a comprehensive and pragmatic yet
+                    concise React with Hooks (+ opt-in TypeScript) book.
+                    Purchase of this book includes free online access to the
+                    always up-to-date digital book.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="./assets/imgs/books/es6-beyond.jpg"
+                    alt="You Don't Know JS: ES6 & Beyond"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    You Don't Know JS: ES6 & Beyond
+                  </h3>
+                  <h4 class="carousel__item-sub-title">
+                    No matter how much experience you have with JavaScript, odds
+                    are you don’t fully understand the language. As part of the
+                    "You Don’t Know JS" series, this compact guide focuses on
+                    new features available in ECMAScript 6 (ES6), the latest
+                    version of the standard upon which JavaScript is built.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1200 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <button class="carousel__next-btn">
+              <svg
+                class="carousel__next-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section> -->
     </div>
+
+    <script type="module">
+      import { setupCarousel } from './assets/js/carousel.js';
+      setupCarousel('carousel-pb', true);
+      setupCarousel('carousel-ai', false, 2000, 1000);
+    </script>
   </body>
 </html>
