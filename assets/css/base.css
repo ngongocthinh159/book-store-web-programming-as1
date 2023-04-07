@@ -69,7 +69,6 @@ html {
 
 .btn-ternary:hover {
   background-color: var(--primary-color);
-  border: none;
   color: var(--background-color);
 }
 

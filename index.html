@@ -139,7 +139,7 @@
                   <a href="" class="header__nav-item-link">About</a>
                 </li>
               </ul>
-              <div href="" class="header__shopping-cart-link">
+              <a href="" class="header__shopping-cart-link">
                 <i class="header__shopping-cart-icon">
                   <svg
                     class="header__shopping-cart-icon-svg"
@@ -238,7 +238,24 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </a>
+
+              <!-- Mobile burger menu -->
+              <label for="mobile-menu-checkbox">
+                <i class="header__mobile-menu-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                      d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                    />
+                  </svg>
+                </i>
+              </label>
+              <input
+                hidden
+                class="header__mobile-menu-checkbox"
+                type="checkbox"
+                id="mobile-menu-checkbox"
+              />
             </div>
           </div>
         </div>
@@ -1546,6 +1563,7 @@
 
       <!-- Section free book -->
       <section class="section-free-book">
+        x`
         <div class="grid wide">
           <div class="fb__wrapper">
             <h2 class="fb__heading category-heading">Read a free textbook</h2>
@@ -1757,6 +1775,10 @@
       import { setupCarousel } from './assets/js/carousel.js';
       setupCarousel('carousel-pb', false);
       setupCarousel('carousel-ai', false, 2000, 1000);
+    </script>
+    <script type="module">
+      import { handleBurgerMenu } from './assets/js/header.js';
+      handleBurgerMenu();
     </script>
   </body>
 </html>
