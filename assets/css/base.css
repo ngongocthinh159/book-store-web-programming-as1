@@ -37,6 +37,7 @@ html {
   font-size: 1.6rem;
   padding: 12px 24px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .btn:hover {
