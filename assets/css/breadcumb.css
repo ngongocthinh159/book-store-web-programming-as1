@@ -30,3 +30,11 @@
   color: #787373;
   padding: 6px;
 }
+
+/* Breadcumb Responsive */
+/* Mobile */
+@media (max-width: 739px) {
+  .breadcumb-wrapper {
+    padding: 0 16px;
+  }
+}
