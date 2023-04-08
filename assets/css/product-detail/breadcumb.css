@@ -1,0 +1,30 @@
+.breadcumb {
+  margin-top: calc(var(--header-height));
+  height: var(--breadcumb-height);
+  display: flex;
+  align-items: center;
+}
+
+.breadcumb-wrapper {
+}
+
+.breadcumb__title {
+  font-size: 1.6rem;
+  color: #787373;
+  text-decoration: none;
+}
+
+.breadcumb__title:hover {
+  color: var(--background-color);
+}
+
+.breadcumb__title--active {
+  color: #1e1e1e;
+  font-weight: bold;
+}
+
+.breadcumb__seperator {
+  font-size: 1.8rem;
+  color: #787373;
+  padding: 6px;
+}
