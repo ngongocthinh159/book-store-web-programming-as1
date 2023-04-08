@@ -55,7 +55,7 @@ function setupCarousel(
     prevBtn.classList.toggle('carousel__prev-btn--disabled', !shouldPrev);
   }
 
-  scrollToActiveItem();
+  // scrollToActiveItem();
   toggleControlBtn();
 
   nextBtn.addEventListener('click', (e) => {
@@ -67,10 +67,10 @@ function setupCarousel(
     toggleControlBtn();
 
     // Clear interval auto swipe, then set back
-    if (currentSetIntervalId) {
-      clearInterval(currentSetIntervalId);
-      currentSetIntervalId = autoSwipeNow();
-    }
+    // if (currentSetIntervalId) {
+    //   clearInterval(currentSetIntervalId);
+    //   currentSetIntervalId = autoSwipeNow();
+    // }
   });
 
   prevBtn.addEventListener('click', (e) => {
@@ -82,16 +82,15 @@ function setupCarousel(
     toggleControlBtn();
 
     // Clear interval auto swipe, then set back
-    if (currentSetIntervalId) {
-      clearInterval(currentSetIntervalId);
-      currentSetIntervalId = autoSwipeNow();
-    }
+    // if (currentSetIntervalId) {
+    //   clearInterval(currentSetIntervalId);
+    //   currentSetIntervalId = autoSwipeNow();
+    // }
   });
 
   // Swipe in mobile;
   let start = null;
   ul.addEventListener('touchstart', function (event) {
-    event.preventDefault();
     if (event.touches.length === 1) {
       //just one finger touched
       start = event.touches.item(0).clientX;
@@ -102,7 +101,7 @@ function setupCarousel(
   });
 
   ul.addEventListener('touchend', function (event) {
-    let offset = 60; //at least 60px are a swipe
+    let offset = 30; //at least 30px are a swipe
     if (start) {
       //the only finger that hit the screen left it
       let end = event.changedTouches.item(0).clientX;

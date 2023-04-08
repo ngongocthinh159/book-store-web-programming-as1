@@ -112,7 +112,7 @@
   display: inline-flex;
   height: 100%;
   align-items: center;
-  margin: 0 16px;
+  padding: 0 16px;
   cursor: pointer;
   display: none;
 }
@@ -139,10 +139,11 @@
 .header__shopping-cart-icon::after {
   content: '3';
   position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(calc(-50% - 10px));
   height: 20px;
   width: 24px;
-  right: 10px;
-  top: 28px;
   background-color: var(--primary-color);
   color: var(--background-color);
   font-size: 1.4rem;
@@ -276,6 +277,13 @@
 }
 
 /* Header Responsive */
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  :root {
+    --header-height: 80px;
+  }
+}
+
 /* Mobile */
 @media (max-width: 739px) {
   :root {
