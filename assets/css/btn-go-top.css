@@ -1,0 +1,41 @@
+.btn-go-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  cursor: pointer;
+  background: var(--primary-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 50%;
+  z-index: 1000;
+  transition: display linear 0.5s;
+}
+
+.btn-go-top--hide {
+  display: none;
+}
+
+.btn-go-top:hover {
+  opacity: 0.8;
+}
+
+.btn-go-top svg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.btn-go-top path {
+  fill: var(--background-color);
+}
+
+/* Repsonsive */
+@media (max-width: 739px) {
+  .btn-go-top {
+    bottom: 10px;
+    right: 10px;
+  }
+}

@@ -36,6 +36,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/btn-go-top.css" />
     <link rel="stylesheet" href="./assets/css/home/section-b-o-m.css" />
     <link rel="stylesheet" href="./assets/css/home/section-pb.css" />
     <link rel="stylesheet" href="./assets/css/home/section-ai.css" />
@@ -43,8 +45,22 @@
     <link rel="stylesheet" href="./assets/css/home/section-trusted.css" />
     <link rel="stylesheet" href="./assets/css/home/section-gbt.css" />
     <link rel="stylesheet" href="./assets/css/home/section-fb.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/home/responsive.css" />
+
+    <!-- Scripts -->
+    <script type="module" defer>
+      import { setupCarousel } from './assets/js/carousel.js';
+      setupCarousel('carousel-pb', false);
+      setupCarousel('carousel-ai', false, 2000, 1000);
+    </script>
+    <script type="module" defer>
+      import { handleBurgerMenu } from './assets/js/header.js';
+      handleBurgerMenu();
+    </script>
+    <script type="module" defer>
+      import { handleBtnGoTop } from './assets/js/btn-go-top.js';
+      handleBtnGoTop();
+    </script>
   </head>
   <body>
     <div class="app">
@@ -1587,7 +1603,7 @@
         </div>
       </section>
 
-      <!-- Section footer -->
+      <!-- Footer -->
       <section class="section-footer">
         <div class="footer-wrapper">
           <div class="grid wide">
@@ -1768,16 +1784,15 @@
           <a href="" class="footer__copy-right-link">Bookcademy</a>
         </div>
       </section>
-    </div>
 
-    <script type="module">
-      import { setupCarousel } from './assets/js/carousel.js';
-      setupCarousel('carousel-pb', false);
-      setupCarousel('carousel-ai', false, 2000, 1000);
-    </script>
-    <script type="module">
-      import { handleBurgerMenu } from './assets/js/header.js';
-      handleBurgerMenu();
-    </script>
+      <!-- Go to top button -->
+      <div class="btn-go-top btn-go-top--hide" id="btn-go-top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"
+          />
+        </svg>
+      </div>
+    </div>
   </body>
 </html>
