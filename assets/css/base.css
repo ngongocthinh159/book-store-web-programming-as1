@@ -1,9 +1,10 @@
 :root {
   --primary-color: #ffca42;
-  --secondary-color: #f47920;
+  --secondary-color: #ff3945;
   --background-color: #1b3764;
   --white-color: #fff;
   --black-color: #000;
+  --text-color: #0F1111;
 
   --header-height: 100px;
   --breadcumb-height: 48px;

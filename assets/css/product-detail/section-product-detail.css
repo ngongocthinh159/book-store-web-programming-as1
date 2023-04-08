@@ -1,6 +1,6 @@
 .section-product-detail {
-  background-color: white;
-  padding: 90px 0px;
+  background-color: #f5f5f3;
+  padding: 60px 0px;
 }
 
 .pd__left-container {
@@ -17,7 +17,7 @@
 }
 
 .pd__side-list-item {
-  border: 2px solid #f6f6f6;
+  border: 2px solid #d5d9d9;
   border-radius: 4px;
   padding-top: 86%;
   position: relative;
@@ -82,109 +82,225 @@
 }
 
 .pd__right-container {
-  
 }
 
 .pd__heading {
-
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 8px;
+  color: var(--text-color);
 }
 
 .pd__version {
-
+  font-size: 2.8rem;
+  color: #565959;
 }
 
 .pd__author-info {
-
+  font-size: 1.4rem;
+  line-height: 20px;
+  color: var(--text-color);
+  margin-bottom: 16px;
 }
 
 .pd__author-name {
-
+  color: #007185;
 }
 
 .pd__author-title {
-
+  color: #565959;
 }
 
 .pd__sub-heading {
-
+  color: #686363;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .pd__option-heading {
-
+  display: flex;
+  justify-content: space-between;
+  color: #686363;
+  margin-bottom: 12px;
 }
 
 .pd__option-heading-left {
-
+  font-size: 1.4rem;
 }
 
 .pd__option-heading-right {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  color: var(--text-color);
+}
 
+.pd__option-heading-right:hover {
+  color: var(--secondary-color);
 }
 
 .pd__option-list {
-
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .pd__option-item {
+  border: 2px solid #f6f6f6;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 8px;
+  border-color: #d5d9d9;
+  border-radius: 3px;
+  cursor: pointer;
+  flex-basis: 130px;
+}
 
+.pd__option-item:hover {
+  background-color: #f7fafa;
+}
+
+.pd__option-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.pd__option-item--active {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  font-weight: 700;
 }
 
 .pd__option-item-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #0f1111;
+}
 
+.pd__option-item--active:hover {
+  background-color: transparent;
 }
 
 .pd__option-item-title-icon {
-
 }
 
 .pd__option-item-price {
+  font-size: 1.4rem;
+  color: #565959;
+}
 
+.pd__option-item--active .pd__option-item-price {
+  color: var(--secondary-color);
+}
+
+.pd__option-item:hover .pd__option-item-price {
+  color: var(--secondary-color);
 }
 
 .pd__include-tax-text {
-
+  font-size: 1.2rem;
+  margin: 0;
+  color: #565959;
+  margin-bottom: 24px;
 }
 
 .pd__btn-add {
+  padding: 12px 0;
+  font-size: 1.8rem;
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  cursor: pointer;
+}
 
+.pd__btn-add:hover {
+  opacity: 0.8;
 }
 
 .pd__or-text {
-
+  color: #686363;
+  font-size: 1.4rem;
+  margin: 0 16px;
 }
 
-.pd__btn-add {
+.pd__btn-trial {
+  padding: 12px 0;
+  font-size: 1.8rem;
+  background-color: var(--white-color);
+  color: #1e1e1e;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  cursor: pointer;
+}
 
+.pd__btn-trial:hover {
+  opacity: 0.8;
 }
 
 .pd__detail-container {
-
 }
 
 .pd__detail-heading-wrapper {
-
+  margin-top: 36px;
+  margin-bottom: 18px;
 }
 
 .pd__detail-heading-list {
-
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  border-bottom: 3px solid #e8e8e8;
 }
 
 .pd__detail-heading-item {
+  font-size: 1.4rem;
+  line-height: 3.2;
+  position: relative;
+  cursor: pointer;
+  color: #787373;
+}
 
+
+.pd__detail-heading-item:hover {
+  color: #1e1e1e;
+}
+
+.pd__detail-heading-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .pd__detail-heading-item--active {
-
+  color: #1e1e1e;
 }
 
-.pd__detail-heading-item {
-
-}
-
-.pd__detail-heading-item {
-
+.pd__detail-heading-item--active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #1e1e1e;
 }
 
 .pd__detail-body {
+}
 
+.pd__detail-body-p {
+  font-size: 1.4rem;
+  text-align: justify;
+  margin: 0;
+  margin-bottom: 16px;
 }
