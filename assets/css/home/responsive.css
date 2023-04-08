@@ -177,6 +177,7 @@
   }
   .fb__heading {
     font-size: 2.4rem;
+    margin-bottom: 16px;
   }
   .fb__sub-heading {
     font-size: 1.6rem;
@@ -197,6 +198,7 @@
   }
 }
 
+/* Very narrow mobile */
 @media (max-width: 300px) {
   .b-o-m__welcome-text {
     font-size: 2rem;

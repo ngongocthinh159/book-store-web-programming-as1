@@ -277,6 +277,13 @@
 }
 
 /* Header Responsive */
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+  .header__connection-list {
+    display: none;
+  }
+}
+
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
   :root {

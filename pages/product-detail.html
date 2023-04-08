@@ -42,7 +42,18 @@
       rel="stylesheet"
       href="../assets/css/product-detail/section-product-detail.css"
     />
+    <link rel="stylesheet" href="../assets/css/product-detail/section-al.css" />
     <link rel="stylesheet" href="../assets/css/product-detail/responsive.css" />
+
+    <!-- Script -->
+    <script type="module" defer>
+      import { handleBurgerMenu } from '../assets/js/header.js';
+      handleBurgerMenu();
+    </script>
+    <script type="module" defer>
+      import { setupCarousel } from '../assets/js/carousel.js';
+      setupCarousel('carousel-ai', false, 2000, 1000);
+    </script>
   </head>
   <body>
     <div class="app">
@@ -51,14 +62,14 @@
         <div class="grid wide">
           <div class="header-wrapper">
             <div class="header-right">
-              <a href="" class="header__logo-link">
+              <a href="/" class="header__logo-link">
                 <img
                   src="../assets/imgs/logo.png"
                   alt="Bookcademy Logo"
                   class="header__logo-img"
                 />
               </a>
-              <ul class="header__connection-list hide-on-mobile-tablet">
+              <ul class="header__connection-list">
                 <li class="header__connection-item">
                   <a href="" class="header__connection-item-link">
                     <i class="header__connection-item-icon">
@@ -124,7 +135,7 @@
 
             <div class="header-left">
               <ul class="header__nav-list">
-                <li class="header__nav-item header__nav-item--active">
+                <li class="header__nav-item">
                   <a href="" class="header__nav-item-link">Home</a>
                 </li>
                 <li class="header__nav-item">
@@ -263,7 +274,7 @@
       <div class="breadcumb">
         <div class="grid wide">
           <div class="breadcumb-wrapper">
-            <a href="./category.html" class="breadcumb__title">Programming</a>
+            <a href="/" class="breadcumb__title">Home</a>
             <span class="breadcumb__seperator">/</span>
             <a href="./category.html" class="breadcumb__title"
               >Artificial Intelligence</a
@@ -285,7 +296,7 @@
             <div class="col l-6 m-12 c-12">
               <div class="pd__left-container">
                 <div class="row sm-gutter">
-                  <div class="col l-3 m-3 c-12">
+                  <div class="col l-3 m-3 c-12 pd__side-list-wrapper">
                     <ul class="pd__side-list">
                       <li class="pd__side-list-item pd__side-list-item--active">
                         <div
@@ -329,7 +340,9 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="col l-9 m-9 c-12">
+                  <div
+                    class="col l-9 m-9 c-12 pd__main-img-container-ratio-wrapper"
+                  >
                     <div class="pd__main-img-container-ratio">
                       <div class="pd__main-img-container-wrapper">
                         <div
@@ -358,100 +371,721 @@
                   <span class="pd__author-name">Peter Norvig</span>
                   <span class="pd__author-title">(Author)</span>
                 </div>
-              </div>
-              <p class="pd__sub-heading">
-                Artificial Intelligence: A Modern Approach, 3e offers the most
-                comprehensive, up-to-date introduction to the theory and
-                practice of artificial intelligence.
-              </p>
-              <div class="pd__option-heading">
-                <span class="pd__option-heading-left">Available format</span>
-                <a href="" class="pd__option-heading-right">Format guide</a>
-              </div>
-              <ul class="pd__option-list">
-                <li class="pd__option-item">
-                  <span class="pd__option-item-title">
-                    <i class="pd__option-item-title-icon"></i>Kindle</span
-                  >
-                  <span class="pd__option-item-price">$20.99</span>
-                </li>
-                <li class="pd__option-item">
-                  <span class="pd__option-item-title">
-                    <i class="pd__option-item-title-icon"></i>Auditbook</span
-                  >
-                  <span class="pd__option-item-price">$5.59</span>
-                </li>
-                <li class="pd__option-item pd__option-item--active">
-                  <span class="pd__option-item-title">
-                    <i class="pd__option-item-title-icon"></i>Hardcover</span
-                  >
-                  <span class="pd__option-item-price">$67.99</span>
-                </li>
-                <li class="pd__option-item">
-                  <span class="pd__option-item-title">
-                    <i class="pd__option-item-title-icon"></i>Paperback</span
-                  >
-                  <span class="pd__option-item-price">$23.59</span>
-                </li>
-                <li class="pd__option-item">
-                  <span class="pd__option-item-title">
-                    <i class="pd__option-item-title-icon"></i>Audio CD</span
-                  >
-                  <span class="pd__option-item-price">$42.39</span>
-                </li>
-              </ul>
-              <p class="pd__include-tax-text">incl. local Tax & Shipping*</p>
-              <button class="pd__btn-add">Add to Bag</button>
-              <span class="pd__or-text">or</span>
-              <button class="pd__btn-trial">Free trial</button>
-              <div class="pd__detail-container">
-                <div class="pd__detail-heading-wrapper">
-                  <ul class="pd__detail-heading-list">
-                    <li
-                      class="pd__detail-heading-item pd__detail-heading-item--active"
-                    >
-                      Description
-                    </li>
-                    <li class="pd__detail-heading-item">Shipping</li>
-                    <li class="pd__detail-heading-item">Book Guide</li>
-                  </ul>
+                <p class="pd__sub-heading">
+                  Artificial Intelligence: A Modern Approach, 3e offers the most
+                  comprehensive, up-to-date introduction to the theory and
+                  practice of artificial intelligence.
+                </p>
+                <div class="pd__option-heading">
+                  <span class="pd__option-heading-left">Available format</span>
+                  <a href="" class="pd__option-heading-right">Format guide</a>
                 </div>
-                <div class="pd__detail-body">
-                  <p class="pd__detail-body-p">
-                    Artificial Intelligence: A Modern Approach, 3e offers the
-                    most comprehensive, up-to-date introduction to the theory
-                    and practice of artificial intelligence. Number one in its
-                    field, this textbook is ideal for one or two-semester,
-                    undergraduate or graduate-level courses in Artificial
-                    Intelligence.
-                  </p>
-                  <p class="pd__detail-body-p">
-                    Dr. Peter Norvig, contributing Artificial Intelligence
-                    author and Professor Sebastian Thrun, a Pearson author are
-                    offering a free online course at Stanford University on
-                    artificial intelligence.
-                  </p>
-                  <p class="pd__detail-body-p">
-                    According to an article in The New York Times, the course on
-                    artificial intelligence is “one of three being offered
-                    experimentally by the Stanford computer science department
-                    to extend technology knowledge and skills beyond this elite
-                    campus to the entire world.” One of the other two courses,
-                    an introduction to database software, is being taught by
-                    Pearson author Dr. Jennifer Widom.
-                  </p>
-                  <p class="pd__detail-body-p">
-                    Artificial Intelligence: A Modern Approach, 3e is available
-                    to purchase as an eText for your KindleTM, NOOKTM, and the
-                    iPhone®/iPad®.
-                  </p>
-                  <p class="pd__detail-body-p">
-                    To learn more about the course on artificial intelligence,
-                    visit http://www.ai-class.com.
-                  </p>
+                <ul class="pd__option-list">
+                  <li class="pd__option-item">
+                    <span class="pd__option-item-title">
+                      <i class="pd__option-item-title-icon"></i>Kindle</span
+                    >
+                    <span class="pd__option-item-price">$20.99</span>
+                  </li>
+                  <li class="pd__option-item">
+                    <span class="pd__option-item-title">
+                      <i class="pd__option-item-title-icon"></i>Auditbook</span
+                    >
+                    <span class="pd__option-item-price">$5.59</span>
+                  </li>
+                  <li class="pd__option-item pd__option-item--active">
+                    <span class="pd__option-item-title">
+                      <i class="pd__option-item-title-icon"></i>Hardcover</span
+                    >
+                    <span class="pd__option-item-price">$67.99</span>
+                  </li>
+                  <li class="pd__option-item">
+                    <span class="pd__option-item-title">
+                      <i class="pd__option-item-title-icon"></i>Paperback</span
+                    >
+                    <span class="pd__option-item-price">$23.59</span>
+                  </li>
+                  <li class="pd__option-item">
+                    <span class="pd__option-item-title">
+                      <i class="pd__option-item-title-icon"></i>Audio CD</span
+                    >
+                    <span class="pd__option-item-price">$42.39</span>
+                  </li>
+                </ul>
+                <p class="pd__include-tax-text">incl. local Tax & Shipping*</p>
+
+                <div class="pd__option-heading">
+                  <span class="pd__option-heading-left">Specifications</span>
+                </div>
+                <ul class="pd__spec-list">
+                  <li class="pd__spec-item">
+                    <p class="pd__spec-item-title">ISBN-10</p>
+                    <i class="pd__spec-item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80zM64 96v64h64V96H64zM0 336c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V336zm64 16v64h64V352H64zM304 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H304c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm80 64H320v64h64V96zM256 304c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16v96c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16v64c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V304zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"
+                        />
+                      </svg>
+                    </i>
+                    <p class="pd__spec-item-detail">0136042597</p>
+                  </li>
+                  <li class="pd__spec-item">
+                    <p class="pd__spec-item-title">ISBN-13</p>
+                    <i class="pd__spec-item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80zM64 96v64h64V96H64zM0 336c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V336zm64 16v64h64V352H64zM304 32h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H304c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48zm80 64H320v64h64V96zM256 304c0-8.8 7.2-16 16-16h64c8.8 0 16 7.2 16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s7.2-16 16-16s16 7.2 16 16v96c0 8.8-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s-7.2-16-16-16s-16 7.2-16 16v64c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V304zM368 480a16 16 0 1 1 0-32 16 16 0 1 1 0 32zm64 0a16 16 0 1 1 0-32 16 16 0 1 1 0 32z"
+                        />
+                      </svg>
+                    </i>
+                    <p class="pd__spec-item-detail">978-0136042594</p>
+                  </li>
+                  <li class="pd__spec-item">
+                    <p class="pd__spec-item-title">Edition</p>
+                    <i class="pd__spec-item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M320 488c0 9.5-5.6 18.1-14.2 21.9s-18.8 2.3-25.8-4.1l-80-72c-5.1-4.6-7.9-11-7.9-17.8s2.9-13.3 7.9-17.8l80-72c7-6.3 17.2-7.9 25.8-4.1s14.2 12.4 14.2 21.9v40h16c35.3 0 64-28.7 64-64V153.3C371.7 141 352 112.8 352 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3V320c0 70.7-57.3 128-128 128H320v40zM456 80a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM192 24c0-9.5 5.6-18.1 14.2-21.9s18.8-2.3 25.8 4.1l80 72c5.1 4.6 7.9 11 7.9 17.8s-2.9 13.3-7.9 17.8l-80 72c-7 6.3-17.2 7.9-25.8 4.1s-14.2-12.4-14.2-21.9V128H176c-35.3 0-64 28.7-64 64V358.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3V192c0-70.7 57.3-128 128-128h16V24zM56 432a24 24 0 1 0 48 0 24 24 0 1 0 -48 0z"
+                        />
+                      </svg>
+                    </i>
+                    <p class="pd__spec-item-detail">3rd</p>
+                  </li>
+                  <li class="pd__spec-item">
+                    <p class="pd__spec-item-title">Publisher</p>
+                    <i class="pd__spec-item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+                        />
+                      </svg>
+                    </i>
+                    <p class="pd__spec-item-detail">Pearson</p>
+                  </li>
+                  <li class="pd__spec-item">
+                    <p class="pd__spec-item-title">Publication date</p>
+                    <i class="pd__spec-item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zm64 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm128 0v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V272c0-8.8-7.2-16-16-16H336zM64 400v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H80c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H208zm112 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"
+                        />
+                      </svg>
+                    </i>
+                    <p class="pd__spec-item-detail">December 1, 2009</p>
+                  </li>
+                </ul>
+                <div class="pd__btn-wrapper">
+                  <button class="pd__btn-add">Add to Bag</button>
+                  <span class="pd__or-text">or</span>
+                  <button class="pd__btn-trial">Free trial</button>
+                </div>
+                <div class="pd__detail-container">
+                  <div class="pd__detail-heading-wrapper">
+                    <ul class="pd__detail-heading-list">
+                      <li
+                        class="pd__detail-heading-item pd__detail-heading-item--active"
+                      >
+                        Description
+                      </li>
+                      <li class="pd__detail-heading-item">Shipping</li>
+                      <li class="pd__detail-heading-item">Book Guide</li>
+                    </ul>
+                  </div>
+                  <div class="pd__detail-body">
+                    <p class="pd__detail-body-p">
+                      Artificial Intelligence: A Modern Approach, 3rd offers the
+                      most comprehensive, up-to-date introduction to the theory
+                      and practice of artificial intelligence. Number one in its
+                      field, this textbook is ideal for one or two-semester,
+                      undergraduate or graduate-level courses in Artificial
+                      Intelligence.
+                    </p>
+                    <p class="pd__detail-body-p">
+                      Dr. Peter Norvig, contributing Artificial Intelligence
+                      author and Professor Sebastian Thrun, a Pearson author are
+                      offering a free online course at Stanford University on
+                      artificial intelligence.
+                    </p>
+                    <p class="pd__detail-body-p">
+                      According to an article in The New York Times, the course
+                      on artificial intelligence is “one of three being offered
+                      experimentally by the Stanford computer science department
+                      to extend technology knowledge and skills beyond this
+                      elite campus to the entire world.” One of the other two
+                      courses, an introduction to database software, is being
+                      taught by Pearson author Dr. Jennifer Widom.
+                    </p>
+                    <p class="pd__detail-body-p">
+                      The book is intended for an undergraduate audience but can
+                      also be used for graduate-level studies with the
+                      suggestion of adding some of the primary sources listed in
+                      the extensive bibliography. Programs in the book are
+                      presented in pseudo code with implementations in Java,
+                      Python, and Lisp available online. There are also
+                      unsupported implementations in Prolog, C++, C#, and
+                      several other languages. A GitHub repository exists that
+                      is dedicated to implementations of the subject material.
+                    </p>
+                    <p class="pd__detail-body-p">
+                      Artificial Intelligence: A Modern Approach, 3e is
+                      available to purchase as an eText for your KindleTM,
+                      NOOKTM, and the iPhone®/iPad®.
+                    </p>
+                    <p class="pd__detail-body-p">
+                      To learn more about the course on artificial intelligence,
+                      visit
+                      <a href="https://aiclass.com.hk/">aiclass.com.hk</a>.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section also like -->
+      <section class="section-also-like">
+        <div class="container">
+          <h2 class="al__heading">You might also like</h2>
+          <div id="carousel-ai" class="carousel">
+            <button class="carousel__prev-btn">
+              <svg
+                class="carousel__prev-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+                />
+              </svg>
+            </button>
+            <ul class="carousel__list">
+              <li class="carousel__item carousel__item--active">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-basics.jpg"
+                    alt="Artificial Intelligence Basics: A Non-Technical Introduction"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Artificial Intelligence Basics: A Non-Technical Introduction
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                  >
+                    Artificial Intelligence
+                  </a>
+                  <h4 class="carousel__item-sub-title">
+                    Artificial Intelligence Basics has arrived to equip you with
+                    a fundamental, timely grasp of AI and its impact. Author Tom
+                    Taulli provides an engaging, non-technical introduction to
+                    important concepts such as machine learning, deep learning,
+                    natural language processing (NLP), robotics, and more. In
+                    addition to guiding you through real-world case studies and
+                    practical implementation steps, Taulli uses his expertise to
+                    expand on the bigger questions that surround AI. These
+                    include societal trends, ethics, and future impact AI will
+                    have on world governments, company structures, and daily
+                    life.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1340 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-applied.jpg"
+                    alt="Applied Artificial Intelligence: A Handbook For Business Leaders"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Applied Artificial Intelligence: A Handbook For Business
+                    Leaders
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Artificial Intelligence</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Selected as CES 2018 Top Technology Book of the Year
+                    ***"Artificial intelligence" is the buzz word of the day.
+                    You've no doubt read your fair share of media hype either
+                    proclaiming doom and gloom where robots seize our jobs or
+                    prophesying a new utopia where AI cures all our human
+                    problems. But what does it actually mean for your role as a
+                    business leader?
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        600 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">10 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-singularity.jpg"
+                    alt="The Singularity Is Near: When Humans Transcend Biology"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    The Singularity Is Near: When Humans Transcend Biology
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Artificial Intelligence</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    For over three decades, Ray Kurzweil has been one of the
+                    most respected and provocative advocates of the role of
+                    technology in our future. In his classic The Age of
+                    Spiritual Machines, he argued that computers would soon
+                    rival the full range of human intelligence at its best. Now
+                    he examines the next step in this inexorable evolutionary
+                    process: the union of human and machine, in which the
+                    knowledge and skills embedded in our brains will be combined
+                    with the vastly greater capacity, speed, and
+                    knowledge-sharing ability of our creations.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1600 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">20 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-hundred-ml.jpg"
+                    alt="The Hundred-Page Machine Learning Book"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    The Hundred-Page Machine Learning Book
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Machine Learning</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Peter Norvig, Research Director at Google, co-author of
+                    AIMA, the most popular AI textbook in the world: "Burkov has
+                    undertaken a very useful but impossibly hard task in
+                    reducing all of machine learning to 100 pages. He succeeds
+                    well in choosing the topics — both theory and practice —
+                    that will be useful to practitioners, and for the reader who
+                    understands that this is the first 100 (or actually 150)
+                    pages you will read, not the last, provides a solid
+                    introduction to the field."
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2400 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">32 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-deep-learning-practitioners.jpg"
+                    alt="Deep Learning: A Practitioner's Approach"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Deep Learning: A Practitioner's Approach
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Deep Learning</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Although interest in machine learning has reached a high
+                    point, lofty expectations often scuttle projects before they
+                    get very far. How can machine learning―especially deep
+                    neural networks―make a real difference in your organization?
+                    This hands-on guide not only provides the most practical
+                    information available on the subject, but also helps you get
+                    started building efficient deep learning networks.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1400 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">16 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-neural-networks.jpg"
+                    alt="Neural Networks and Deep Learning"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Neural Networks and Deep Learning
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Deep Learning</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    This book covers the theory and algorithms of deep learning
+                    and it provides detailed discussions of the relationships of
+                    neural networks with traditional machine learning
+                    algorithms. The mathematical aspects are concretely
+                    presented without losing accessibility. The book is written
+                    in a textbook style, and it includes exercises, a solution
+                    manual, and instructor slides. The depth and breadth of
+                    coverage are unique to the book.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        2100 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">28 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-deep-r.png"
+                    alt="Deep Learning with R"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Deep Learning with R
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Deep Learning</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Deep Learning with R introduces the world of deep learning
+                    using the powerful Keras library and its R language
+                    interface. The book builds your understanding of deep
+                    learning through intuitive explanations and practical
+                    examples.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">12 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-vision-algorithms.jpg"
+                    alt="Computer Vision: Algorithms and Applications"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Computer Vision: Algorithms and Applications
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Computer Vision</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Presents state-of-the-art techniques, featuring new material
+                    on deep learning and deep neural networks Structured to
+                    support active curricula and project-oriented courses
+                    Provides, exercises and additional readings, as well as
+                    supplementary material
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">3000</div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">60 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-vision-opencv.jpg"
+                    alt="Learning OpenCV 4 Computer Vision with Python 3: Get to grips with tools, techniques, and algorithms for computer vision and machine learning"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Learning OpenCV 4 Computer Vision with Python 3: Get to
+                    grips with tools, techniques, and algorithms for computer
+                    vision and machine learning
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Computer Vision</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Updated for OpenCV 4 and Python 3, this book covers the
+                    latest on depth cameras, 3D tracking, augmented reality, and
+                    deep neural networks, helping you solve real-world computer
+                    vision problems with practical codeKey Features
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1660 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">20 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a
+                  href="./pages/product-detail.html"
+                  class="carousel__item-link"
+                >
+                  <img
+                    class="carousel__item-img"
+                    src="../assets/imgs/books/ai-linear-regression.jpg"
+                    alt="Introduction to Linear Regression Analysis"
+                  />
+                </a>
+
+                <div class="carousel__item-info">
+                  <h3 class="carousel__item-info-title">
+                    Introduction to Linear Regression Analysis
+                  </h3>
+                  <a
+                    href="./pages/category.html"
+                    class="carousel__item-sub-category-link"
+                    >Linear Regression</a
+                  >
+                  <h4 class="carousel__item-sub-title">
+                    Introduction to Linear Regression Analysis, Fifth Edition
+                    continues to present both the conventional and less common
+                    uses of linear regression in today’s cutting-edge scientific
+                    research. The authors blend both theory and application to
+                    equip readers with an understanding of the basic principles
+                    needed to apply regression model-building techniques in
+                    various fields of study, including engineering, management,
+                    and the health sciences.
+                  </h4>
+                  <div class="carousel__item-detail-wrapper">
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Pages</div>
+                      <div class="carousel__item-detail-sub-title">
+                        1800 Pages
+                      </div>
+                    </div>
+                    <div class="carousel__item-detail">
+                      <div class="carousel__item-detail-title">Length</div>
+                      <div class="carousel__item-detail-sub-title">26 Hour</div>
+                    </div>
+                  </div>
+                  <a
+                    href="./pages/product-detail.html"
+                    class="carousel__btn-buy btn btn-secondary"
+                    >Buy Now</a
+                  >
+                </div>
+              </li>
+            </ul>
+            <button class="carousel__next-btn">
+              <svg
+                class="carousel__next-btn-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  fill="#ffca42"
+                  d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -466,9 +1100,9 @@
                 <div class="row">
                   <div class="col l-7 m-6 c-12">
                     <div class="footer__connection-container">
-                      <a href="#" class="footer__logo-link">
+                      <a href="/" class="footer__logo-link">
                         <img
-                          src="./assets/imgs/logo.png"
+                          src="../assets/imgs/logo.png"
                           alt=""
                           class="footer__logo-img"
                         />
@@ -638,5 +1272,40 @@
         </div>
       </section>
     </div>
+
+    <script>
+      const mainImg = document.getElementsByClassName('pd__main-img')[0];
+      const lisList = [
+        ...document.getElementsByClassName('pd__side-list-item'),
+      ];
+      const optionItems = [
+        ...document.getElementsByClassName('pd__option-item'),
+      ];
+
+      lisList.forEach((li) => {
+        li.addEventListener('click', () => {
+          lisList.forEach((li) => {
+            li.classList.remove('pd__side-list-item--active');
+          });
+
+          li.classList.add('pd__side-list-item--active');
+
+          const backGroundImg = li.getElementsByClassName(
+            'pd__side-list-item-img'
+          )[0].style.backgroundImage;
+          mainImg.style.backgroundImage = backGroundImg;
+        });
+      });
+
+      optionItems.forEach((option) => {
+        option.addEventListener('click', () => {
+          optionItems.forEach((option) => {
+            option.classList.remove('pd__option-item--active');
+          });
+
+          option.classList.add('pd__option-item--active');
+        });
+      });
+    </script>
   </body>
 </html>
