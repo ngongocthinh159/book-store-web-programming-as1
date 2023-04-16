@@ -1,5 +1,4 @@
 .breadcumb {
-  margin-top: calc(var(--header-height));
   height: var(--breadcumb-height);
   display: flex;
   align-items: center;
@@ -34,7 +33,16 @@
 /* Breadcumb Responsive */
 /* Mobile */
 @media (max-width: 739px) {
+  :root {
+    --breadcumb-height: 32px;
+  }
   .breadcumb-wrapper {
     padding: 0 16px;
   }
+  .breadcumb__title {
+    font-size: 1.3rem;
+  }
+  .breadcumb__seperator {
+  font-size: 1.5rem;
+}
 }

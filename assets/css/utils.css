@@ -12,3 +12,7 @@
 .mt-36 {
   margin-top: 36px;
 }
+
+.padding-header {
+  padding-top: var(--header-height);
+}

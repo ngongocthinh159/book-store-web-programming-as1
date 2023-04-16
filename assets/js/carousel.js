@@ -1,3 +1,10 @@
+/**
+ *
+ * @param {string} carouselId Carousel Element ID in HTML file
+ * @param {boolean} autoSwipe Setup JS auto swipe carousel
+ * @param {int} swipeEach Swipe the carousel each
+ * @param {int} delayTime The first auto swipe will happen after delayTime
+ */
 function setupCarousel(
   carouselId,
   autoSwipe = false,
@@ -117,6 +124,7 @@ function setupCarousel(
     }
   });
 
+  // TODO: AUTO SWIPE STILL BUG, THIS FEATURE IS TURNED OFF BY DEFAULT
   // Auto swipe
   function autoSwipeNow() {
     return setInterval(() => {
