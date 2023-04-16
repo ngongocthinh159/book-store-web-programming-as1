@@ -179,10 +179,20 @@
   margin: 0;
   font-size: 2.4rem;
   line-height: 30px;
+  --line-height: 2.4rem;
+  line-height: var(--line-height);
+  max-height: calc(var(--line-height) * 1);
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-list__header-sort-wrapper {
   font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .product-list__sort-select {
