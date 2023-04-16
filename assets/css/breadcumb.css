@@ -34,15 +34,19 @@
 /* Mobile */
 @media (max-width: 739px) {
   :root {
-    --breadcumb-height: 32px;
+    --breadcumb-height: auto;
   }
   .breadcumb-wrapper {
-    padding: 0 16px;
+    padding: 8px 16px 0;
   }
   .breadcumb__title {
     font-size: 1.3rem;
   }
   .breadcumb__seperator {
-  font-size: 1.5rem;
-}
+    font-size: 1.5rem;
+  }
+  .breadcumb__title {
+    margin-bottom: 8px;
+    display: inline-block;
+  }
 }

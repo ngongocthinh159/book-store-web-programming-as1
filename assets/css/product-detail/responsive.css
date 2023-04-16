@@ -13,6 +13,7 @@
 @media (max-width: 739px) {
   .section-product-detail {
     padding-top: 24px;
+    padding-bottom: 12px;
   }
   .pd__left-container {
     margin: 0 16px;
@@ -22,7 +23,6 @@
   }
   .pd__side-list {
     flex-direction: row;
-    /* flex-wrap: wrap; */
     overflow-x: auto;
     justify-content: start;
     padding-top: 8px;

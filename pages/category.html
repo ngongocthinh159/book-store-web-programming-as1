@@ -38,7 +38,14 @@
     <link rel="stylesheet" href="../assets/css/header.css" />
     <link rel="stylesheet" href="../assets/css/footer.css" />
     <link rel="stylesheet" href="../assets/css/breadcumb.css" />
+    <link rel="stylesheet" href="../assets/css/category/section-pl.css" />
     <link rel="stylesheet" href="../assets/css/category/responsive.css" />
+
+    <!-- Script -->
+    <script type="module" defer>
+      import { handleBurgerMenu } from '../assets/js/header.js';
+      handleBurgerMenu();
+    </script>
   </head>
   <body>
     <div class="app">
@@ -121,9 +128,9 @@
             <div class="header-left">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a href="/index.html" class="header__nav-item-link">Home</a>
+                  <a href="../index.html" class="header__nav-item-link">Home</a>
                 </li>
-                <li class="header__nav-item">
+                <li class="header__nav-item header__nav-item--active">
                   <a href="./category.html" class="header__nav-item-link"
                     >Categories</a
                   >
@@ -131,8 +138,8 @@
                 <li class="header__nav-item">
                   <a href="" class="header__nav-item-link">Blog</a>
                 </li>
-                <li class="header__nav-item header__nav-item--active">
-                  <a href="/pages/contact.html" class="header__nav-item-link"
+                <li class="header__nav-item">
+                  <a href="./contact.html" class="header__nav-item-link"
                     >Contact</a
                   >
                 </li>
@@ -239,7 +246,10 @@
               </a>
 
               <!-- Mobile burger menu -->
-              <label for="mobile-menu-checkbox">
+              <label
+                class="filter-group-item__item-label"
+                for="mobile-menu-checkbox"
+              >
                 <i class="header__mobile-menu-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path
@@ -267,6 +277,8 @@
           <div class="breadcumb-wrapper">
             <a href="/index.html" class="breadcumb__title">Home</a>
             <span class="breadcumb__seperator">/</span>
+            <a href="/index.html" class="breadcumb__title">Categories</a>
+            <span class="breadcumb__seperator">/</span>
             <a href="./category.html" class="breadcumb__title"
               >Artificial Intelligence</a
             >
@@ -274,167 +286,418 @@
             <a
               href="./category.html"
               class="breadcumb__title breadcumb__title--active"
-              >Classic</a
+              >Deep Learning</a
             >
           </div>
         </div>
       </div>
 
-      <!-- Section sub category -->
+      <!-- Section product list -->
       <section class="section-sub-category">
         <div class="grid wide">
           <div class="row">
-            <div class="col l-3 m-3 c-0">
+            <div class="col l-3">
               <div class="filter-container">
                 <ul class="filter-group-list">
                   <li class="filter-group-item">
-                    <h2 class="filter-group__heading">Sub Categories</h2>
+                    <h2 class="filter-group__heading">
+                      <span class="filter-group__heading-text"
+                        >Sub Categories</span
+                      >
+                    </h2>
 
                     <ul class="filter-group-item__list">
                       <li class="filter-group-item__item">
-                        Artificial Intelligence
+                        <a href="" class="filter-group-item__item-link"
+                          >Machine Learning</a
+                        >
                       </li>
-                      <li class="filter-group-item__item">Machine Learning</li>
-                      <li class="filter-group-item__item">Deep Learning</li>
-                      <li class="filter-group-item__item">Linear Regression</li>
-                      <li class="filter-group-item__item">
-                        Reinforcement Learning
-                      </li>
-                      <li class="filter-group-item__item">
-                        Natural Language Processing
-                      </li>
-                      <li class="filter-group-item__item">Computer Vision</li>
-                      <li class="filter-group-item__item">Expert Systems</li>
-                    </ul>
-                  </li>
-
-                  <li class="filter-group-item">
-                    <h2 class="filter-group__heading">Author</h2>
-
-                    <ul class="filter-group-item__list">
-                      <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-1" />
-                        <label for="author-1">Aihwa Ong</label>
+                      <li
+                        class="filter-group-item__item filter-group-item__item--active"
+                      >
+                        <a href="" class="filter-group-item__item-link"
+                          >Deep Learning</a
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-2" />
-                        <label for="author-2">Alex Haley</label>
+                        <a href="" class="filter-group-item__item-link"
+                          >Linear Regression</a
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-3" />
-                        <label for="author-3">Belle Yang</label>
+                        <a href="" class="filter-group-item__item-link"
+                          >Reinforcement Learning</a
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-4" />
-                        <label for="author-4">Ben Fountain</label>
+                        <a href="" class="filter-group-item__item-link"
+                          >Natural Language Processing</a
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-5" />
-                        <label for="author-5">Bertrand Russell</label>
+                        <a href="" class="filter-group-item__item-link"
+                          >Computer Vision</a
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-6" />
-                        <label for="author-6">Clint Emerson</label>
-                      </li>
-                      <li class="filter-group-item__item">
-                        <input type="radio" name="author" id="author-7" />
-                        <label for="author-7">Dalai Lama</label>
+                        <a href="" class="filter-group-item__item-link"
+                          >Expert Systems</a
+                        >
                       </li>
                     </ul>
                   </li>
 
                   <li class="filter-group-item">
-                    <h2 class="filter-group__heading">Price Range</h2>
+                    <h2 class="filter-group__heading">
+                      <span class="filter-group__heading-text">Author</span>
+                    </h2>
 
                     <ul class="filter-group-item__list">
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-1"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          class="filter-group-item__item-label"
+                          for="author-1"
+                          >Aihwa Ong</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-2"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-2"
+                          >Alex Haley</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-3"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-3"
+                          >Belle Yang</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-4"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-4"
+                          >Ben Fountain</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-5"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-5"
+                          >Bertrand Russell</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-6"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-6"
+                          >Clint Emerson</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-7"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-7"
+                          >Dalai Lama</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-8"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-8"
+                          >E.D. Hirsch</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-9"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-9"
+                          >Eckhart Tolle</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-10"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-10"
+                          >Emily Nagoski</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-11"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-11"
+                          >Ha-Joon Chang</label
+                        >
+                      </li>
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="author"
+                          id="author-12"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="author-12"
+                          >Robyn R. Ryle</label
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="filter-group-item">
+                    <h2 class="filter-group__heading">
+                      <span class="filter-group__heading-text"
+                        >Price Range</span
+                      >
+                    </h2>
+
+                    <ul class="filter-group-item__list">
+                      <li class="filter-group-item__item">
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-1"
                         />
-                        <label for="price-range-1">Under $50</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-1"
+                          >Under $50</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-2"
                         />
-                        <label for="price-range-2">$50 - $100</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-2"
+                          >$50 - $100</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-3"
                         />
-                        <label for="price-range-3">$100 - $200</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-3"
+                          >$100 - $200</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-4"
                         />
-                        <label for="price-range-4">$200 - $400</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-4"
+                          >$200 - $400</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-5"
                         />
-                        <label for="price-range-5">$400 - $1000</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-5"
+                          >$400 - $1000</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
                         <input
-                          type="radio"
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
                           name="price-range"
                           id="price-range-6"
                         />
-                        <label for="price-range-6">Over $1000</label>
+                        <label
+                          class="filter-group-item__item-label"
+                          for="price-range-6"
+                          >Over $1000</label
+                        >
                       </li>
                     </ul>
                   </li>
 
                   <li class="filter-group-item">
-                    <h2 class="filter-group__heading">Format</h2>
+                    <h2 class="filter-group__heading">
+                      <span class="filter-group__heading-text">Format</span>
+                    </h2>
 
                     <ul class="filter-group-item__list">
                       <li class="filter-group-item__item">
-                        <input type="radio" name="format" id="format-1" />
-                        <label for="format-1">Kindle</label>
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="format"
+                          id="format-1"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="format-1"
+                          >Kindle</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="format" id="format-2" />
-                        <label for="format-2">Auditbook</label>
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="format"
+                          id="format-2"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="format-2"
+                          >Auditbook</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="format" id="format-3" />
-                        <label for="format-3">Hardcover</label>
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="format"
+                          id="format-3"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="format-3"
+                          >Hardcover</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="format" id="format-4" />
-                        <label for="format-4">Paperback</label>
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="format"
+                          id="format-4"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="format-4"
+                          >Paperback</label
+                        >
                       </li>
                       <li class="filter-group-item__item">
-                        <input type="radio" name="format" id="format-5" />
-                        <label for="format-5">Audio CD</label>
+                        <input
+                          class="filter-group-item__item-checkbox"
+                          type="checkbox"
+                          name="format"
+                          id="format-5"
+                        />
+                        <label
+                          class="filter-group-item__item-label"
+                          for="format-5"
+                          >Audio CD</label
+                        >
                       </li>
                     </ul>
                   </li>
                 </ul>
+
+                <div class="filter-container__mobile-toggler">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.082 5.629 9.664 7H8.598l1.789-5.332h1.234L13.402 7h-1.12l-.419-1.371h-1.781zm1.57-.785L11 2.687h-.047l-.652 2.157h1.351z"
+                    />
+                    <path
+                      d="M12.96 14H9.028v-.691l2.579-3.72v-.054H9.098v-.867h3.785v.691l-2.567 3.72v.054h2.645V14zM4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
-            <div class="col l-9 m-9 c-12">
+            <div class="col l-9 m-12 c-12">
               <div class="product-list-container">
                 <div class="product-list__header">
                   <h2 class="product-list__header-heading">Deep Learning</h2>
 
                   <div class="product-list__header-sort-wrapper">
                     Sort by:
-                    <select name="" id="">
+                    <select class="product-list__sort-select" name="" id="">
                       <option value="">Default</option>
                       <option value="">A -> Z</option>
                       <option value="">Z -> A</option>
@@ -451,52 +714,1227 @@
                     <div class="col l-3 m-4 c-6">
                       <div class="product-list__product">
                         <div class="product-list__product-img-wrapper">
-                          <img
-                            src=""
-                            alt=""
-                            class="product-list__product-img"
-                          />
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-learning-practitioners.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
                         </div>
 
-                        <p class="product-list__product-name">
-                          Wild Flowers of Britain and Northern Europe (1974,
-                          Harper Collins)
-                        </p>
-                        <p class="product-list__product-price">$120.39</p>
-                        <p class="product-list__product-status">In stock</p>
-
-                        <div class="product-list__product-overlay">
-                          <div
-                            class="product-list__product-overlay-control-wrapper"
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
                           >
-                            <button
-                              class="product-list__product-overlay-control"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 576 512"
-                              >
-                                <path
-                                  d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
-                                />
-                              </svg>
-                            </button>
-                            <button
-                              class="product-list__product-overlay-control"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 576 512"
-                              >
-                                <path
-                                  d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
-                                />
-                              </svg>
-                            </button>
-                          </div>
+                            <p class="product-list__product-name">
+                              Deep Learning: A Practitioner's Approach
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$38.49</p>
+                          <p class="product-list__product-status">In stock</p>
                         </div>
                       </div>
                     </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-r.png"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with R
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$120.69</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-neural-networks.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Neural Networks and Deep Learning: A Textbook
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$82.52</p>
+                          <p class="product-list__product-status">
+                            Out of stock
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-learning-deep-learning.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Learning Deep Learning: Theory and Practice of
+                              Neural Networks, Computer Vision, Natural Language
+                              Processing, and Transformers Using TensorFlow
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$62.67</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-the-principles.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              The Principles of Deep Learning Theory: An
+                              Effective Theory Approach to Understanding Neural
+                              Networks
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$600.21</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-python.png"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with Python
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$400.12</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-tensorflow.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with TensorFlow and Keras: Build and
+                              deploy supervised, unsupervised, deep, and
+                              reinforcement learning models, 3rd Edition
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$221.32</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-hands-on.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Hands-On Deep Learning Algorithms with Python:
+                              Master deep learning algorithms with extensive
+                              math by implementing them using TensorFlow
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$412.36</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-learning-practitioners.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning: A Practitioner's Approach
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$38.49</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-r.png"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with R
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$120.69</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-neural-networks.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Neural Networks and Deep Learning: A Textbook
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$82.52</p>
+                          <p class="product-list__product-status">
+                            Out of stock
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-learning-deep-learning.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Learning Deep Learning: Theory and Practice of
+                              Neural Networks, Computer Vision, Natural Language
+                              Processing, and Transformers Using TensorFlow
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$62.67</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-the-principles.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              The Principles of Deep Learning Theory: An
+                              Effective Theory Approach to Understanding Neural
+                              Networks
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$600.21</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-python.png"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with Python
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$400.12</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-tensorflow.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Deep Learning with TensorFlow and Keras: Build and
+                              deploy supervised, unsupervised, deep, and
+                              reinforcement learning models, 3rd Edition
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$221.32</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col l-3 m-4 c-6">
+                      <div class="product-list__product">
+                        <div class="product-list__product-img-wrapper">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <img
+                              src="../assets/imgs/books/ai-deep-hands-on.jpg"
+                              alt=""
+                              class="product-list__product-img"
+                            />
+                          </a>
+
+                          <div class="product-list__product-overlay">
+                            <div
+                              class="product-list__product-overlay-control-wrapper"
+                            >
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="View product"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                                  />
+                                  <path
+                                    d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                                  />
+                                </svg>
+                              </a>
+
+                              <a
+                                href="./product-detail.html"
+                                class="product-list__product-overlay-control"
+                                title="Add to cart"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  viewBox="0 0 16 16"
+                                >
+                                  <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                                  />
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="product-list__product-info">
+                          <a
+                            href="./product-detail.html"
+                            class="product-list__product-link"
+                          >
+                            <p class="product-list__product-name">
+                              Hands-On Deep Learning Algorithms with Python:
+                              Master deep learning algorithms with extensive
+                              math by implementing them using TensorFlow
+                            </p>
+                          </a>
+
+                          <p class="product-list__product-price">$412.36</p>
+                          <p class="product-list__product-status">In stock</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-list__pagination">
+                    <ul class="product-list__pagination-list">
+                      <li
+                        class="product-list__pagination-item product-list__pagination-item--disabled"
+                      >
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                      <li
+                        class="product-list__pagination-item product-list__pagination-item--active"
+                      >
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >1</a
+                        >
+                      </li>
+                      <li class="product-list__pagination-item">
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >2</a
+                        >
+                      </li>
+                      <li class="product-list__pagination-item">
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >3</a
+                        >
+                      </li>
+                      <li class="product-list__pagination-item">
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >4</a
+                        >
+                      </li>
+                      <li
+                        class="product-list__pagination-item product-list__pagination-item--disabled"
+                      >
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >...</a
+                        >
+                      </li>
+                      <li class="product-list__pagination-item">
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                          >14</a
+                        >
+                      </li>
+                      <li class="product-list__pagination-item">
+                        <a
+                          href="./category.html"
+                          class="product-list__pagination-item-link"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                            />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -693,5 +2131,16 @@
         </div>
       </section>
     </div>
+
+    <script>
+      const filterContainer = document.querySelector('.filter-container');
+      const filterTogglerBtn = document.querySelector(
+        '.filter-container__mobile-toggler'
+      );
+
+      filterTogglerBtn.addEventListener('click', () => {
+        filterContainer.classList.toggle('filter-container-side--active');
+      });
+    </script>
   </body>
 </html>

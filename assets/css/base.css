@@ -8,6 +8,7 @@
 
   --header-height: 100px;
   --breadcumb-height: 48px;
+  --side-filter-width: 260px;
 }
 
 *,
@@ -34,6 +35,25 @@ html {
 .app {
   overflow: hidden;
   position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 500px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 500px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* Button */
