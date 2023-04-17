@@ -2,8 +2,9 @@
 
 This is a static programming book store website
 
-Usage:
-Run 'index.html' with live server
+Usage: Run 'index.html' with live server
+
+Demo: https://ngongocthinh159.github.io/static-bookcademy/
 
 Preview:
 ![Screenshot](https://drive.google.com/uc?export=download&id=1l_gwgy_GqG-YaCQWU35_Vywzuoeskkes)
