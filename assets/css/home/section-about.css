@@ -31,13 +31,18 @@
   margin-bottom: 28px;
 }
 
+.ac__slogan-wrapper {
+  margin-bottom: 16px;
+}
+
 .ac__slogan {
   color: #969aa0;
   font-size: 1.9rem;
   line-height: 1.6;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-weight: 300;
+  text-align: justify;
 }
 
 .ac__list {
