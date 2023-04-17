@@ -15,9 +15,40 @@
 
 .section-trustred__img-wrapper {
   text-align: center;
-  padding: 0 30px;
+}
+
+.section-trustred__img-wrapper {
+  margin-bottom: 32px;
+  padding: 0 16px;
 }
 
 .section-trusted__img {
   width: 100%;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+.section-trusted__company-name {
+  font-size: 2.4rem;
+  color: var(--background-color);
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.section-trusted__company-slogan {
+  font-size: 1.8rem;
+  color: #969aa0;
+  font-weight: 300;
+  margin: 0;
+  --line-height: 3rem;
+  line-height: var(--line-height);
+  max-height: calc(var(--line-height) * 2);
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
