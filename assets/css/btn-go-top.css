@@ -12,7 +12,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 50%;
   z-index: 1000;
-  transition: display linear 0.5s;
+  transition: all 0.5s linear;
 }
 
 .btn-go-top--hide {
