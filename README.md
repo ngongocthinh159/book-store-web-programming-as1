@@ -6,7 +6,7 @@ Usage: Run 'index.html' with live server
 
 Demo: https://ngongocthinh159.github.io/static-bookcademy/
 
-Documentation: ![click here](https://docs.google.com/document/d/1kLltixNGYlsuv5G3UnCIZ_U_IE3kmksn/edit?usp=sharing&ouid=113986200732092090925&rtpof=true&sd=true)
+Documentation: ![a link](https://docs.google.com/document/d/1kLltixNGYlsuv5G3UnCIZ_U_IE3kmksn/edit?usp=sharing&ouid=113986200732092090925&rtpof=true&sd=true)
 
 Preview:
 ![Screenshot](https://drive.google.com/uc?export=download&id=1l_gwgy_GqG-YaCQWU35_Vywzuoeskkes)
