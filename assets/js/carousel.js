@@ -1,4 +1,18 @@
 /**
+ * RMIT University Vietnam
+ * Course: COSC2430 Web Programming
+ * Semester: 2023A
+ * Assessment: Assignment 1
+ * Author: Ngo Ngoc Thinh
+ * ID: s3879364
+ * Acknowledgement:
+ *   1. https://fullstack.edu.vn/
+ *   2. https://gacxepbookstore.vn/
+ *   3. https://www.figma.com/community/file/1187662275043405075
+ *   4. https://www.figma.com/community/file/1165460163859589084
+ */
+
+/**
  *
  * @param {string} carouselId Carousel Element ID in HTML file
  * @param {boolean} autoSwipe Setup JS auto swipe carousel
